@@ -1,7 +1,20 @@
 make faces in videos hard to recognize with the help of tensorflow
 ---
 
+# pipeline
+## 1 视频预处理
+目前查到的需要逐帧提取出图像，图像的尺寸可能需要用插值的办法放缩一下，得到一系列图像。  
+放缩的比例要记录，后面用来还原视频
+
+## 2 人脸检测
+定位所有图像中所有人脸的的位置(猫脸和汪脸也可能混进来)
+
+## 3 归类(识别)
+对人脸分类
+
 # Reference
+基于mtcnn和facenet的实时人脸检测与识别系统开发  
+<https://zhuanlan.zhihu.com/p/25025596>  
 
 Tensorflow Object Detection API  
 <https://github.com/tensorflow/models/tree/master/research/object_detection>  
