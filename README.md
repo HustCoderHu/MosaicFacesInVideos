@@ -1,6 +1,11 @@
 make faces in videos hard to recognize with the help of tensorflow
 ---
 
+# 安装opencv
+参考
+python3 安装 opencv3 （win10,64bit）  
+<https://www.cnblogs.com/combfish/p/5639424.html>  
+
 # pipeline
 ## 1 视频预处理
 目前查到的需要逐帧提取出图像，图像的尺寸可能需要用插值的办法放缩一下，得到一系列图像。  
