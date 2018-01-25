@@ -12,10 +12,22 @@ python3 安装 opencv3 （win10,64bit）
 放缩的比例要记录，后面用来还原视频
 
 ## 2 人脸检测
-定位所有图像中所有人脸的的位置(猫脸和汪脸也可能混进来)
+定位所有图像中所有人脸的的位置(猫脸和汪脸也可能混进来)  
+一个人可能长时间处在画面中，导致重复脸过多，下面的聚类时间可能很长。  
+可能可以使用跟踪算法，只记录轨迹和和区域  
+跟踪算法:  
+- KCF 
+- dlib的相关滤波器(dlib不能解决遮挡恢复的问题)  
+太长时间没办法, 可以设定30帧以内的可以恢复，通过特征的马氏距离比对，可以恢复
+- kalman滤波
 
 ## 3 归类(识别)
-对人脸分类
+对人脸分类  
+使用不依赖于类别数量的聚类算法，比如 chinese whispers  
+参考  
+<facenet chinese whispers(face cluster)>  
+http://blog.csdn.net/liyuan123zhouhui/article/details/70312716  
+https://github.com/zhly0/facenet-face-cluster-chinese-whispers-  
 
 # Reference
 基于mtcnn和facenet的实时人脸检测与识别系统开发  
